@@ -1,7 +1,6 @@
 package c1
 
 import (
-	"fmt"
 	"testing"
 
 	"github.com/stretchr/testify/require"
@@ -49,7 +48,7 @@ var TestCasesForSum = []TestCaseForSum{
 
 func TestSumByLoop(t *testing.T) {
 	for i, tc := range TestCasesForSum {
-		fmt.Println(i)
+		t.Log(i)
 		sum, err := SumByLoop(tc.N)
 		require.Equal(t, tc.ExpectedSum, sum)
 		if tc.ExpectedErr {
@@ -62,7 +61,7 @@ func TestSumByLoop(t *testing.T) {
 
 func TestSumByFormula(t *testing.T) {
 	for i, tc := range TestCasesForSum {
-		fmt.Println(i)
+		t.Log(i)
 		sum, err := SumByFormula(tc.N)
 		require.Equal(t, tc.ExpectedSum, sum)
 		if tc.ExpectedErr {
