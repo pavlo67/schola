@@ -10,6 +10,8 @@ _environments/*.yml
 
 # Data
 *.sqlite
+_libri
+
 
 # Dependencies
 node_modules
