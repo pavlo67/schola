@@ -1,4 +1,4 @@
-package e2
+package b4
 
 import (
 	"testing"
