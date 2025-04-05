@@ -1,0 +1,16 @@
+#pragma once
+
+#include "static_files.h"
+
+uint8_t index_html[] = {0x32, 0x33, 0x34, 0x42, 0x43, 0x44, 0x52, 0x53, 0x54};
+uint8_t main_js[]    = {0x00, 0x01, 0x02};
+uint8_t style_css[]  = {0x00, 0x01, 0x02};
+
+static_file files[] = {
+    {"/",           "text/html",       (uint8_t*)&index_html, sizeof(index_html)},
+    {"/index.html", "text/html",       (uint8_t*)&index_html, sizeof(index_html)},
+    {"/main.js",    "text/javascript", (uint8_t*)&main_js,    sizeof(main_js)},
+    {"/style.css",   "text/css",       (uint8_t*)&style_css,  sizeof(style_css)}
+};
+
+size_t FILES_LENGTH = sizeof(files) / sizeof(static_file);

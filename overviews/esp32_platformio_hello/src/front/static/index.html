@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>ESP32 demo</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href='style.css' rel='stylesheet' type='text/css'/>
+    <script src='main.js' type='text/javascript'></script>
+</head>
+
+<body>
+    <b>Demo form</b><br/>
+    <form action="index.html" method="post">
+    <br>Value:   <input id = "value" name="value">
+    <br><input type="submit" value="Save value">
+    </form>
+
+    <script type="text/javascript">
+        window.fetch("/config")
+        .then(response => {
+            return response.json();
+        })
+        .then(json => { 
+            for (let key in json) {
+                let el = document.getElementById(key);
+                if (el) {
+                    el.value = json[key];
+                } else {
+                    console.log("no input field with key '%s' (gotten from JSON: '%s')", key, json);
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
