@@ -101,24 +101,57 @@ https://community.st.com/t5/stm32-mcus-wireless/stm32-and-wifi/m-p/606978#M16900
 
 ### ESP32C3 — 130 грн. — https://cheapest.com.ua/p2066353956-esp32-devkit-bluetooth.html
 
+Для програмування потрібна тільки плата і звичайний кабель USB Type-C. Ось приклад робочого проєкту під Platformio:
+https://github.com/pavlo67/schola/tree/master/overviews/esp32_platformio_hello
+
+В цьому проєкті:
+* ативується LED;
+* йде вивід на консоль;
+* активується точка доступу WiFi;
+* на платі запускається http-сервер.
+
+Щодо прикладів роботи з периферією, яку можна чіпляти на таку плату, то їх більш ніж достатньо в мережі і кожен, кого не забанив гугл, ютуб чи github, може ними скористатись. Ось, наприклад: https://arduino.ua/art260-rozymna-meteostanciya-na-bazi-esp32 (українською, саме на esp32c3 і platformio).
 
 
-## Мови і середовища розробки
+### STM32F103C8T6 (Blue Pill) — 99 грн. — https://myproject.com.ua/stm32f103c8t6-plata-rozrobnika-ua.html
+
+Ця плата для програмування потребує ще програматора ST-Link — 99 грн. — https://myproject.com.ua/st-linkv2-programator-mini-dlja-stm8-ta-stm32-ua.html
+
+Вона, однак, істотно уступає за параметрами наступні платі від STM, яка при цьому ненабагато дорожча. Також на Blue Pill boot-режим активується не кнопкою, а перемичкою — це доволі незручно.
 
 
-* Platformio (Arduino, бібліотеки ESP, бібліотеки STM32 та багато иншого). Можливі проблеми з установкою, як у всякого великого сучасного фреймворка :-( Але якщо установка прошла — далі мало би бути, на загал, більш-менш гладко.
+### STM32F401RCT6 — 170 грн. — https://prom.ua/ua/p2215009586-maketnaya-plata-stm32f401rct6.html
 
-* MicroPython
-* Eclipse
-* Keil 
+Ця плата для програмування потребує програматора ST-Link — 99 грн. — https://myproject.com.ua/st-linkv2-programator-mini-dlja-stm8-ta-stm32-ua.html
+
+За параметрами початкові моделі STM32 виглядають набагато слабшими, ніж ESP32C3.
+
+
+### Raspberry Pi Zero v/1.3 512M — 665 грн. — https://evo.net.ua/raspberry-pi-zero
+
+Це вже повноцінний компʼютер (якщо приєднати монітор, клавіятуру і мишку), на якому можна використовувати Linux.
+
+
+### Raspberry Pi 4 1Gb — 2199 грн. — https://minicomp.com.ua/ua/raspberry-pi/raspberry-pi-4/raspberry-pi-4-model-b-1gb
+
+
+### Raspberry Pi 4 4Gb — 3399 грн. — https://minicomp.com.ua/ua/raspberry-pi/raspberry-pi-4/raspberry-pi-4-model-b-4gb
+
+Це вже повноцінний компʼютер (якщо приєднати монітор, клавіятуру і мишку), на якому можна використовувати Linux з X-Windows.
+
+### Orange Pi
+
+Лінійка китайських мікрокомпʼютерів, які, при рівних параметрах, помітно дешевші ніж Raspberry Pi, але й викликають більше нарікань (але при цьому досить популярні у нас — отже, це дійсно робочі рішення).
 
 
 ## Community-проєкти
 
-* ELRS - Platformio (VS Code or IntelliJ) 
-* Ardupilot - Eclipse, VS Code
-* Betaflight - Eclipse, VS Code (VS Code зі старту не захотів підтягувати інклюди, тому я користуюсь Eclipse) 
+Для розуміння, як використовувати різні можливости мікроконтролерів, можна подивитись у відомі Community-проєкти
 
-Універсальні проєкти обвішані define'ами :-(
+* ExpressLRS (ELRS) - побудований на Platformio (VS Code or IntelliJ);
+* Ardupilot - з ним можна використовувати, наприклад, Eclipse чи VS Code;
+* Betaflight - з ним можна використовувати, наприклад, Eclipse чи VS Code (але у мене VS Code зі старту не захотів підтягувати інклюди, тому я для Betaflight користуюсь Eclipse).
+
+Універсальні проєкти, звісно, ой які непрості :-(
 
 
