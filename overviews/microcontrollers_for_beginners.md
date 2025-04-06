@@ -86,7 +86,9 @@ https://community.st.com/t5/stm32-mcus-wireless/stm32-and-wifi/m-p/606978#M16900
 Плюси:
 * стандартне операційне середовище — Linux — звільняє від багатьох проблем :-)
 * як правило, основні компʼютерні інтерфейси доступні "з коробки" — WiFi, Bluetooth, LAN, USB, UART, SD, порт для монітора;
-* ресурси памʼяти і швидкодія, як правило, істотно вищі, ніж на мікроконтролерах; в якості верхньої межі розглядаю STM32H743 — 400 МГц (є ще STM32 N-серія на 800 МГц, але взагалі не бачу, як їх купити в Україні), в той же час найпростіша Raspberry Pi Zero стартує з 1 ГГц.
+* ресурси памʼяти і швидкодія, як правило, істотно вищі, ніж на мікроконтролерах; в якості верхньої межі розглядаю STM32H743 — 400 МГц (є ще STM32 N-серія на 800 МГц, але взагалі не бачу, як їх купити в Україні), в той же час найпростіша Raspberry Pi Zero стартує з 1 ГГц;
+* на лінійці Raspberry Pi є інтерфейси UART (завжди), PWM (точно є на RPI4) і, пишуть (я не перевіряв) — I2C та SPI.
+
 
 Мінуси:
 * стандартне операційне середовище — Linux — це не real-time, тому рішення дуже високочастотних задач може виявитись істотно складнішим, ніж на мікроконтролері;
@@ -133,9 +135,14 @@ https://github.com/pavlo67/schola/tree/master/overviews/esp32_platformio_hello
 За параметрами початкові моделі STM32 виглядають набагато слабшими, ніж ESP32C3.
 
 
-### Raspberry Pi Zero v/1.3 512M — 665 грн. — https://evo.net.ua/raspberry-pi-zero
+### Raspberry Pi Zero v1.3 512M — 665 грн. — https://evo.net.ua/raspberry-pi-zero
 
 Це вже повноцінний компʼютер (якщо приєднати монітор, клавіятуру і мишку), на якому можна використовувати Linux.
+
+
+### Orange Pi Zero 2W 2Gb — 1000 грн. — https://prom.ua/ua/p2475922538-minikompyuter-orange-zero.html
+
+Компʼютер, за параметрами схожий на Raspberry Pi 4 2Gb (~2600 грн.), який окрім всіх необхідних інтерфейсів ПК має доступні через GPIO інтерфейси UART, I2C, SPI, PWM (так пишуть в характеристиках).
 
 
 ### Raspberry Pi 4 1Gb — 2199 грн. — https://minicomp.com.ua/ua/raspberry-pi/raspberry-pi-4/raspberry-pi-4-model-b-1gb
@@ -146,6 +153,7 @@ https://github.com/pavlo67/schola/tree/master/overviews/esp32_platformio_hello
 ### Raspberry Pi 4 4Gb — 3399 грн. — https://minicomp.com.ua/ua/raspberry-pi/raspberry-pi-4/raspberry-pi-4-model-b-4gb
 
 Це вже повноцінний високопродуктивний компʼютер (якщо приєднати монітор, клавіятуру і мишку), на якому можна використовувати Linux з X-Windows.
+
 
 ### Orange Pi
 
